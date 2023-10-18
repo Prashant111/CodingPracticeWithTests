@@ -60,11 +60,11 @@ class SudokuSolverTest extends BaseSudokuSolverTest {
 
     private void assertSudokuValidAndValidateSolution(SudokuCell[][] sudokuCells) {
         SudokuSolver sudokuSolver = new SudokuSolver(sudokuCells);
-        System.out.println(getColoredText("Before solving", RED));
+        System.out.println(getColoredText("Given sudoku", RED, true, true));
         printSudoku(sudokuSolver.getSudokuCells());
 
         SudokuCell[][] solvedSudokuCells = sudokuSolver.getSolvedSudokuCells();
-        System.out.println(getColoredText("After solving", GREEN));
+        System.out.println(getColoredText("Solved sudoku", GREEN, true, true));
         printSudoku(solvedSudokuCells);
 
         assertTrue(isSudokuValid(solvedSudokuCells));
