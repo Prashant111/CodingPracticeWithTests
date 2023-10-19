@@ -1,10 +1,9 @@
 package org.example.practice.longest_string;
 
-import org.example.practice.longest_palindrome.LongestPalindromeString;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class LongestStringWithUniqueCharsTest {
 
