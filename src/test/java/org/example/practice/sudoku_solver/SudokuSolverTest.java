@@ -95,5 +95,9 @@ class SudokuSolverTest extends BaseSudokuSolverTest {
     void sudokuSolverTest6() {
         assertSudokuValidAndValidateSolution(initializeSudokuCells6());
     }
+    @Test
+    void sudokuSolverTest7() {
+        assertSudokuValidAndValidateSolution(initializeSudokuCells7());
+    }
 
 }

@@ -370,5 +370,62 @@ protected SudokuCell[][] initializeSudokuCells6() {
         });
         return sudokuCells;
     }
+protected SudokuCell[][] initializeSudokuCells7() {
+        SudokuCell[][] sudokuCells = new SudokuCell[9][9];
+        setSection(sudokuCells, new Integer[][][][]{
+                {
+                        {
+                                {null, null, 7},
+                                {null, null, null},
+                                {8, null, null}
+                        },
+                        {
+                                {6, null, 5},
+                                {null, null, null},
+                                {1, null, null}
+                        },
+                        {
+                                {9, 4, null},
+                                {null, null, 6},
+                                {null, null, null}
+                        },
+                },
+                {
+                        {
+                                {null, null, null},
+                                {null, 7, null},
+                                {null, null, 9}
+                        },
+                        {
+                                {null, null, null},
+                                {null, 9, null},
+                                {null, null, 4}
+                        },
+                        {
+                                {2, null, null},
+                                {null, null, null},
+                                {5, 3, null}
+                        },
+                },
+                {
+                        {
+                                {null, 1, null},
+                                {null, null, null},
+                                {null, null, 3}
+                        },
+                        {
+                                {5, null, null},
+                                {null, null, 6},
+                                {null, null, null}
+                        },
+                        {
+                                {3, 6, null},
+                                {null, null, 7},
+                                {null, null, 2}
+                        },
+                }
+        });
+        return sudokuCells;
+    }
 
 }
