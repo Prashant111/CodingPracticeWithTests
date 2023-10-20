@@ -313,7 +313,8 @@ public class BaseSudokuSolverTest {
         });
         return sudokuCells;
     }
-protected SudokuCell[][] initializeSudokuCells6() {
+
+    protected SudokuCell[][] initializeSudokuCells6() {
         SudokuCell[][] sudokuCells = new SudokuCell[9][9];
         setSection(sudokuCells, new Integer[][][][]{
                 {
@@ -370,7 +371,8 @@ protected SudokuCell[][] initializeSudokuCells6() {
         });
         return sudokuCells;
     }
-protected SudokuCell[][] initializeSudokuCells7() {
+
+    protected SudokuCell[][] initializeSudokuCells7() {
         SudokuCell[][] sudokuCells = new SudokuCell[9][9];
         setSection(sudokuCells, new Integer[][][][]{
                 {
