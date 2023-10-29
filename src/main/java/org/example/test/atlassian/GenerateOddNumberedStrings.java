@@ -47,12 +47,12 @@ public class GenerateOddNumberedStrings {
 
 
         int length = charArray.length;
-        for (int i = length - 1; i > length - count; i--) {
+        for (int i = length - 1; i >= length - count; i--) {
             int indexToSwapValue = random.nextInt(i);
             swap(charArray, indexToSwapValue, i);
         }
 
-        return Arrays.copyOfRange(charArray, length - count + 1, length);
+        return Arrays.copyOfRange(charArray, length - count, length);
     }
 
     private void swap(char[] array, int i1, int i2) {

@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.util.HashMap;
 import java.util.Map;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 class GenerateOddNumberedStringsTest {
@@ -25,6 +26,7 @@ class GenerateOddNumberedStringsTest {
 
     private void assertOddOccurrencesForLength(int givenLength) {
         String string = generateOddNumberedStrings.oddNumberedString(givenLength);
+        assertEquals(Math.max(givenLength, 0), string.length());
         int evenCount = getEvenCount(string);
         assertFalse(evenCount > 0);
     }
@@ -65,7 +67,11 @@ class GenerateOddNumberedStringsTest {
     }
 
     @Test
-    void oddNumberedStringForVeryLargeNumber() {
+    void oddNumberedStringForVeryLargeEvenNumber() {
         assertOddOccurrencesForLength(1_000_000);
+    }
+    @Test
+    void oddNumberedStringForVeryLargeOddNumber() {
+        assertOddOccurrencesForLength(1_000_001);
     }
 }
