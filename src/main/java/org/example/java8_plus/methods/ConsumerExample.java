@@ -5,11 +5,9 @@ import java.util.function.Consumer;
 
 public class ConsumerExample<T> {
     public Consumer<T> consumer = (input) ->
-            System.out.println("input = " + input);
+            System.out.println("output = " + input);
 
     public void runConsumerExample(List<T> inputList) {
-//        Consumer<T> tConsumer = consumer.andThen(consumer);
-//        inputList.forEach(consumer);
         inputList.forEach(input -> consumer.accept(input));
     }
 }

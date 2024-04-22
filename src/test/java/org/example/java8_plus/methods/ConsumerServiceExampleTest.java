@@ -6,39 +6,50 @@ import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ConsumerServiceExampleTest {
 
-    private ConsumerExample<String> consumerExample;
-    private final PrintStream originalOut = System.out;
-    private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
-
+    private static ByteArrayOutputStream outContent;
+    private static PrintStream originalOut;
 
     @BeforeEach
-    void setUp() {
-        consumerExample = new ConsumerExample<>();
-        System.setOut(new PrintStream(outputStreamCaptor));
+    public void setUpStreams() {
+        outContent = new ByteArrayOutputStream();
+        originalOut = System.out;
+        System.setOut(new PrintStream(outContent));
     }
 
     @AfterEach
-    void tearDown() {
-        System.setOut(new PrintStream(outputStreamCaptor));
+    public void restoreStreams() {
+        System.setOut(originalOut);
     }
 
     @Test
-    void runConsumerExample() {
-        List<String> inputList = new ArrayList<>(Arrays.asList("Prashant", "Rahul", "Maninder"));
+    void testRunConsumerExample_Integer() {
+        List<Integer> inputList = Arrays.asList(1, 2, 3);
+        ConsumerExample<Integer> consumerExample = new ConsumerExample<>();
 
-        String capturedOutput = outputStreamCaptor.toString()
-                                                  .trim();
         consumerExample.runConsumerExample(inputList);
-        System.out.println("capturedOutput = " + capturedOutput);
 
-        assertEquals("Expected Output", capturedOutput);
+        assertEquals("output = 1\noutput = 2\noutput = 3\n", getConsoleOutput());
+    }
+
+    // Helper method to capture console output
+    private String getConsoleOutput() {
+        return outContent.toString();
+    }
+
+    @Test
+    void testRunConsumerExample_String() {
+        List<String> inputList = Arrays.asList("apple", "banana", "cherry");
+        ConsumerExample<String> consumerExample = new ConsumerExample<>();
+
+        consumerExample.runConsumerExample(inputList);
+
+        assertEquals("output = apple\noutput = banana\noutput = cherry\n", getConsoleOutput());
     }
 }

@@ -37,3 +37,11 @@ Zsrc/main/java/org/example/practice/assignments/sep_28/leaderboard/LeaderboardLa
 Rsrc/main/java/org/example/practice/assignments/sep_28/leaderboard/LeaderBoard.java,7\d\7d200eb17dba06b7b2933c8689562034dfe6ce9a
 Œ
 \src/main/java/org/example/practice/assignments/sep_28/voting_application/ElectionWinner.java,2\f\2f1dcb649cc5f449e1126d2a723692077818bee0
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+u
+Esrc/main/java/org/example/data_structures/linked_list/LinkedList.java,8/f/8fa988e3aa07c54e6fdb177984a03d6cc3a5066e
+|
+Lsrc/test/java/org/example/java8_plus/methods/ConsumerServiceExampleTest.java,0/b/0b9d46bb199e1e616c3a5a6ca4c5a46a73ec67f7
+q
+Asrc/main/java/org/example/java8_plus/methods/ConsumerExample.java,1/1/119195e5b75f3270a48eb4f5034729df81f1aee8

@@ -1,9 +1,8 @@
 package org.example.data_structures.linked_list;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class LinkedList<T> {
     private Node<T> headNode;
@@ -15,10 +14,12 @@ public class LinkedList<T> {
     public LinkedList(List<T> values) {
         if (Objects.isNull(values) || values.isEmpty())
             return;
-        headNode = new Node<>(values.get(0));
+        headNode = new Node<>(values.getFirst());
+        Iterator<T> iterator = values.iterator();
         Node<T> iter = headNode;
-        for (int i = 1; i < values.size(); i++) {
-            iter.setNext(new Node<>(values.get(i)));
+        while (iterator.hasNext()) {
+            T next = iterator.next();
+            iter.setNext(new Node<>(next));
             iter = iter.getNext();
         }
     }
