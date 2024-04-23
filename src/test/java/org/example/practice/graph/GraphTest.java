@@ -14,7 +14,7 @@ class GraphTest extends GraphsProvider {
 
     @Test
     void initializeGraphWithNullTest() {
-        assertThrows(IllegalArgumentException.class,
+        assertThrows(NullPointerException.class,
                      () -> new Graph(null)
                     );
     }
