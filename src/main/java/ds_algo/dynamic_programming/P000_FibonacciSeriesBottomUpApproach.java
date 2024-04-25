@@ -1,10 +1,10 @@
-package ds_algo.company_focused.google.topics.dynamic_programming;
+package ds_algo.dynamic_programming;
 
-public class FibonacciSeriesBottomUpApproach {
+public class P000_FibonacciSeriesBottomUpApproach {
     private final int n;
     private final int[] cachedArray;
 
-    public FibonacciSeriesBottomUpApproach(int n) {
+    public P000_FibonacciSeriesBottomUpApproach(int n) {
         if (n < 0) {
             throw new RuntimeException("Input should not be negative");
         }
