@@ -10,10 +10,11 @@ class P004_BinomialCoefficientTest {
     private P004_BinomialCoefficient binomialCoefficient;
 
     @Test
-    void binomialTreeNegativeInputExceptException() {
-        assertThrows(RuntimeException.class,
-                     () -> new P004_BinomialCoefficient(-10)
+    void binomialTreeNegativeInputExpectException() {
+        RuntimeException runtimeException = assertThrows(RuntimeException.class,
+                                                         () -> new P004_BinomialCoefficient(-10)
         );
+        assertEquals("Input can not be negative", runtimeException.getMessage());
     }
 
     @Test
