@@ -1,6 +1,0 @@
-
-v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(óøî˜8ëë†®1
-{
-java:S1450	"YRemove the "timestamps" field and declare it as a local variable in the relevant methods.(°ˆªßøÿÿÿÿ8ê’¥‡®1
-P
-java:S1068	".Remove this unused "timestamps" private field.(°ˆªßøÿÿÿÿ8ÊÙª‡®1
