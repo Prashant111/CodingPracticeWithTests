@@ -1,7 +1,10 @@
 package org.example.practice.sudoku_solver;
 
+import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.awt.*;
 
 import static java.awt.Color.GREEN;
 import static java.awt.Color.RED;
@@ -60,15 +63,20 @@ class SudokuSolverTest extends BaseSudokuSolverTest {
 
     private void assertSudokuValidAndValidateSolution(SudokuCell[][] sudokuCells) {
         SudokuSolver sudokuSolver = new SudokuSolver(sudokuCells);
-        System.out.println(getColoredText("Given sudoku", RED, true, true));
+        System.out.println(headingText("Given sudoku", RED));
         printSudoku(sudokuSolver.getSudokuCells());
 
         SudokuCell[][] solvedSudokuCells = sudokuSolver.getSolvedSudokuCells();
-        System.out.println(getColoredText("Solved sudoku", GREEN, true, true));
+        System.out.println(headingText("Solved sudoku", GREEN));
         printSudoku(solvedSudokuCells);
 
         assertTrue(isSudokuValid(solvedSudokuCells));
         assertTrue(isSudokuSolved(solvedSudokuCells));
+    }
+
+    @NotNull
+    private static String headingText(String text, Color textColor) {
+        return getColoredText(text, textColor, true, true);
     }
 
     @Test
@@ -95,6 +103,7 @@ class SudokuSolverTest extends BaseSudokuSolverTest {
     void sudokuSolverTest6() {
         assertSudokuValidAndValidateSolution(initializeSudokuCells6());
     }
+
     @Test
     void sudokuSolverTest7() {
         assertSudokuValidAndValidateSolution(initializeSudokuCells7());

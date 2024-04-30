@@ -24,6 +24,6 @@ class MergeKSortedListsTest {
     @Test
     void getOneSortedList() {
         LinkedList<Integer> oneSortedList = mergeKSortedLists.getOneSortedList();
-        oneSortedList.print();
+//        oneSortedList.print();
     }
 }
